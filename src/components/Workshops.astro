@@ -19,12 +19,22 @@ const workshops = await getCollection("workshops");
     {
       workshops.map((workshop, i) => (
         <li>
-          <WorkshopCard workshop={workshop} theme={themes[i % themes.length]} />
+          <WorkshopCard
+            workshop={workshop}
+            theme={themes[i % themes.length]}
+            showCode={i === 0}
+          />
         </li>
       ))
     }
   </ul>
 </section>
+
+<script>
+  console.log(
+    "Psst... hover over the first workshop to find the first digit of the code",
+  );
+</script>
 
 <style>
   ul {

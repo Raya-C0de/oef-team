@@ -1,6 +1,6 @@
 ---
 import ArrowLink from "./ArrowLink.astro";
-const { workshop, theme = "grey" } = Astro.props;
+const { workshop, theme = "grey", showCode = false } = Astro.props;
 ---
 
 <article class={`workshop-card workshop-card--${theme}`}>
@@ -12,6 +12,7 @@ const { workshop, theme = "grey" } = Astro.props;
       title="Learn more"
     />
     <img class="image" src={workshop.data.image.src} alt="" />
+    {showCode && <span class="secret" aria-hidden="true">1st digit: 1</span>}
   </div>
 </article>
 
@@ -48,6 +49,18 @@ const { workshop, theme = "grey" } = Astro.props;
 
   .link {
     grid-area: link;
+  }
+
+  .secret {
+    grid-area: link;
+    justify-self: end;
+    align-self: end;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  article:hover .secret {
+    opacity: 1;
   }
 
   .image {
