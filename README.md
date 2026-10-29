@@ -16,3 +16,12 @@
 - Elien Depouillon.
 - Raya Gevaert.
 - Hannelore Meers.
+
+## Hidden code
+
+Four digits are hidden on the website. Enter them on the `/code` page.
+
+- Digit 1 (Raya): hover over the first workshop card (Pen plotter) on the home page. A hint is logged in the browser console.
+- Digit 2: _todo_
+- Digit 3 (Hannelore): on the news page.
+- Digit 4: _todo_
