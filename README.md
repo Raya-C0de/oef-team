@@ -11,3 +11,8 @@
 ### Illustrations
 
 <https://pixels.market/illustrations/doodledo?c=technology>
+
+## Team
+- Elien Depouillon
+- Raya Gevaert
+- Hannelore Meers
