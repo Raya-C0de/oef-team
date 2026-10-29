@@ -13,6 +13,6 @@
 <https://pixels.market/illustrations/doodledo?c=technology>
 
 ## Team
-- Elien Depouillon
-- Raya Gevaert
-- Hannelore Meers
+- Elien Depouillon.
+- Raya Gevaert.
+- Hannelore Meers.
