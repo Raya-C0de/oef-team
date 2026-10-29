@@ -1,15 +1,22 @@
 
-# Project
+# AGENTS.md
 
-This project is a website built for the Web 3 course at Howest Devine.
+## Project
 
-The website is developed as a team project during a Git workshop. It is intended for visitors who want to explore the site's content and pages.
+- Website for Creative Coding Kortrijk (CCK), a community where art and code meet.
+- Audience: artists, designers, programmers and curious people, from beginners to professionals, who want to join workshops, meetups and events.
+- Pages: home (`index.astro`), news (`news.astro`) and about (`about.md`).
+- Content: workshops (pen plotter, p5.js, Max/MSP), foundations (the community's pillars) and team members.
 
-# Stack & constraints
+## Stack & constraints
 
-- The website uses Astro.
-- Content collections are used to manage structured content.
-- HTML, CSS and JavaScript are used.
-- No CSS framework is used.
-- Git and GitHub are used for version control and collaboration.
-- The project uses components and layouts to structure pages.
+- Astro 7 (`astro` is the only framework dependency).
+- Content collections in `src/content.config.ts` with the `glob` loader and zod schemas:
+  - `workshops`: `title`, `image`
+  - `team`: `name`, `function`, `bio`, `pic`
+  - `foundations`: `title`, `description`
+- Content lives as Markdown in `src/content/<collection>/`.
+- Components in `src/components/`, layouts in `src/layouts/` (`Base.astro`, `Markdown.astro`).
+- Plain CSS, no CSS framework: `src/styles/reset.css`, `global.css`, `markdown.css` plus scoped `<style>` in components, using CSS custom properties (e.g. `--sp-l`, `--fs-5`).
+- Font: Space Grotesk via `@fontsource-variable/space-grotesk`.
+- Scripts: `npm run dev` (with `--host`), `npm run build`, `npm run preview`.
